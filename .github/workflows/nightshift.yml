@@ -1,0 +1,45 @@
+name: Nightshift
+
+# Scores the last-known-good file. Does not scrape.
+# A live trigger is opt-in only (workflow_dispatch + confirm).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      live:
+        description: "Set to yes to POST /dca/trigger (costs ~600 page-loads)"
+        default: "no"
+        required: false
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Score last-known-good
+        run: node --input-type=module -e "
+          import { readFileSync } from 'node:fs';
+          const rows = JSON.parse(readFileSync('collectors/samples/notices.json','utf8'));
+          if (!Array.isArray(rows) || rows.length < 5) {
+            console.error('notices.json too small', rows.length);
+            process.exit(1);
+          }
+          const required = ['title','deadline'];
+          let filled = 0, total = 0;
+          for (const row of rows) {
+            for (const key of required) {
+              total += 1;
+              if (row[key]) filled += 1;
+            }
+          }
+          const rate = filled / total;
+          console.log(JSON.stringify({ rows: rows.length, fill_rate: rate, fields: Object.keys(rows[0]||{}) }));
+          if (rate < 0.7) process.exit(2);
+        "
