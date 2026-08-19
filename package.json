@@ -1,0 +1,24 @@
+{
+  "name": "spinneret",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-healing public-procurement radar. Same collector. Nothing downstream sees a gap.",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000"
+  },
+  "dependencies": {
+    "next": "^15.4.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.17.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "playwright": "^1.55.0",
+    "typescript": "^5.9.2"
+  }
+}

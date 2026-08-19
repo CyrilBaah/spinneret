@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spinneret fixture · v2 redesign</title>
+  <style>
+    :root { font-family: ui-sans-serif, system-ui, sans-serif; color: #0b1020; background: #0b1020; }
+    body { max-width: 860px; margin: 40px auto; padding: 0 20px; color: #e8e6df; }
+    .flag { position: fixed; top: 12px; right: 12px; background: #d35400; color: #fff; padding: 6px 10px; font-size: 12px; }
+    h1 { font-size: 28px; }
+    .notice-board { display: grid; gap: 12px; }
+    .card { background: #171b2c; padding: 16px 18px; border: 1px solid #2a3148; }
+    .headline { font-size: 18px; margin: 0 0 6px; }
+    .meta { font-size: 13px; color: #b7b3a7; }
+    .when { font-variant-numeric: tabular-nums; }
+    .state { color: #7dcea0; }
+  </style>
+</head>
+<body>
+  <div class="flag">v2 · redesign</div>
+  <h1>Open public notices</h1>
+  <p>Same data, new markup. Old classes (.tender-title, .tender-deadline) are gone.</p>
+  <div class="notice-board">
+    <article class="card" data-testid="notice">
+      <h2 class="headline" data-testid="notice-name">Supply of dual desks for Jaman North schools</h2>
+      <div class="meta">
+        <span data-testid="buyer">Jaman North District Assembly</span>
+        · <span class="when" data-testid="closes-at">2026-09-03 11:00</span>
+        · <span class="state" data-testid="phase">open</span>
+      </div>
+    </article>
+    <article class="card" data-testid="notice">
+      <h2 class="headline" data-testid="notice-name">Construction of 3-storey CHPS facility at Newtown</h2>
+      <div class="meta">
+        <span data-testid="buyer">Ayawaso North Municipal Assembly</span>
+        · <span class="when" data-testid="closes-at">2026-09-02 10:00</span>
+        · <span class="state" data-testid="phase">open</span>
+      </div>
+    </article>
+    <article class="card" data-testid="notice">
+      <h2 class="headline" data-testid="notice-name">Bathymetric measurements at Bui</h2>
+      <div class="meta">
+        <span data-testid="buyer">Bui Power Authority</span>
+        · <span class="when" data-testid="closes-at">2026-09-16 10:00</span>
+        · <span class="state" data-testid="phase">open</span>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
