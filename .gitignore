@@ -12,4 +12,5 @@ dist/
 .cursor/
 tsconfig.tsbuildinfo
 next-env.d.ts
-demo/
+demo/*
+!demo/spinneret-demo.mp4
