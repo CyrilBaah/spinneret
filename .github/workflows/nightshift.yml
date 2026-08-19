@@ -24,7 +24,8 @@ jobs:
           node-version: "22"
       - run: npm ci
       - name: Score last-known-good
-        run: node --input-type=module -e "
+        run: |
+          node --input-type=module -e "
           import { readFileSync } from 'node:fs';
           const rows = JSON.parse(readFileSync('collectors/samples/notices.json','utf8'));
           if (!Array.isArray(rows) || rows.length < 5) {
@@ -42,4 +43,4 @@ jobs:
           const rate = filled / total;
           console.log(JSON.stringify({ rows: rows.length, fill_rate: rate, fields: Object.keys(rows[0]||{}) }));
           if (rate < 0.7) process.exit(2);
-        "
+          "

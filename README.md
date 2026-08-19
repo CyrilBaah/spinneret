@@ -1,7 +1,5 @@
 # Spinneret
 
-Public procurement sites redesign. Scrapers go silent. People miss contracts.
-
 Spinneret is a self-healing radar over **UNDP procurement notices**. Bright Data Scraper Studio owns the extractor. When the page moves, we heal the **same** Collector ID. **Nothing downstream sees a gap.**
 
 Built for [Into the Scrape-Verse](https://www.wemakedevs.org/hackathons/scrape-verse) (WeMakeDevs × Bright Data), 17–23 August 2026.
