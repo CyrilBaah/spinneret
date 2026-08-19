@@ -1,0 +1,32 @@
+{
+  "collector_id": "c_mszb8vqn27d8djbjon",
+  "status": "awaiting_approval",
+  "completed_steps": [
+    "planner",
+    "control_preview_runner",
+    "code_fixer",
+    "step_preview_runner",
+    "request_fulfillment_validator",
+    "step_advance",
+    "control_preview_runner",
+    "code_fixer",
+    "step_preview_runner",
+    "request_fulfillment_validator",
+    "step_advance"
+  ],
+  "prompt": "Keep title, deadline, and product_page_url. Also capture from each listing row: ref_no, office_country, process, posted_at.",
+  "view_url": "https://brightdata.com/cp/scrapers/c_mszb8vqn27d8djbjon",
+  "next_step": "bdata scraper approve c_mszb8vqn27d8djbjon --url https://procurement-notices.undp.org/",
+  "preview_result": [
+    {
+      "title": "UNDP-TCD-00979 : CONSULTANT(E) NATIONAL(E) SPECIALISTE EN ÉNERGIE",
+      "deadline": "31-Aug-26 @ 11:00 AM (New York time)",
+      "product_page_url": "https://procurement-notices.undp.org/view_negotiation.cfm?nego_id=48821",
+      "ref_no": "UNDP-TCD-00979",
+      "office_country": "UNDP-TCD/CHAD",
+      "process": "IC - Individual contractor",
+      "posted_at": "19-Aug-26"
+    }
+  ],
+  "diff_summary": "proposed template has 2 step(s) — review at view_url"
+}

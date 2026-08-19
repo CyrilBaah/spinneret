@@ -1,0 +1,15 @@
+product:
+  id: notices
+  env: COLLECTOR_NOTICES
+  collector_id: c_mszb8vqn27d8djbjon
+  type: Discovery
+  url: https://procurement-notices.undp.org/
+  fallback_url: https://www.ungm.org/Public/Notice
+  public: true
+  government_classified: false
+  in_prebuilt_library: false
+
+rejected:
+  - ghaneps.gov.gh   # Domain not allowed — government
+  - ppa.gov.gh
+  - shopalto.xyz     # training store, not the product
