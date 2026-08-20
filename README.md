@@ -4,7 +4,7 @@ Spinneret is a self-healing radar over **UNDP procurement notices**. Bright Data
 
 Built for [Into the Scrape-Verse](https://www.wemakedevs.org/hackathons/scrape-verse) (WeMakeDevs × Bright Data), 17–23 August 2026.
 
-**Demo video:** [demo/spinneret-demo.mp4](demo/spinneret-demo.mp4)
+**Demo video:** [demo/spinneret-demo.mp4](demo/spinneret-demo.mp4) · [YouTube](https://www.youtube.com/watch?v=04aTD1jSQ28)
 
 ## Collector proof
 
